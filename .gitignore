@@ -1,4 +1,6 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+#####
+#WEB#
+#####
 
 # dependencies
 /node_modules
@@ -32,3 +34,35 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#####
+#TEX#
+#####
+
+*.asy
+*.dvi
+*.eps
+*.toc
+*.out
+*.synctex.gz
+*.xwm
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.pre
+*.synctex
+*.synctex(busy)
+
+# hopefully asy diagrams are limited to 2 digit and no pdfs have weird filenames
+*-?.pdf
+*-??.pdf
+
+# uh idk why id need this but ok
+*.prob
+*.sol
+*.hint
+*.solu
+
+# die latexindent
+__latexindent_temp.tex
