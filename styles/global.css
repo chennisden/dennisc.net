@@ -3,7 +3,6 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
-@bootstrap;
 
 ul li:before {
     content: '->'; /* Want to use Bootstrap right arrow */
