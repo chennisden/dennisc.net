@@ -1,12 +1,12 @@
-import Link from 'next/link'
+import Link from '../components/Link';
 import { FC } from "react";
 
 const Item: FC<{
   name: string;
   link: string;
-}> = ({ name, link }) => (
-  <Link href = {`${link}`}><a>{name}</a></Link>
-)
+}> = ({ children, name, link }) => (
+  <span><Link href = {`${link}`}><a>{name}</a></Link>&nbsp;{children}</span>
+);
 
 const Home: FC<{}> = () => {
   return (
@@ -18,10 +18,15 @@ const Home: FC<{}> = () => {
       <h3 className = "text-xl font-bold">Math</h3>
       <ul>
         <li>
-          <Item name = "Careful!" link = "resources/careful.pdf"></Item>
+          <Item name = "Careful!" link = "resources/careful.pdf">A handout with commonly missed problems on select math contests and some psychology on how to avoid mistakes.</Item>
         </li>
       </ul>
       <h3 className = "text-xl font-bold">Writing</h3>
+      <ul>
+        <li>
+          <Item name = "Contest Report" link = "reports/contest-creation.pdf">Written with William Dai. This is a reflection on the contests I've ran under MAC and some advice for those interested in running their own contests. (The TeX source is available <Link href = "reports/contest-creation.tex">here</Link>.)</Item>
+        </li>
+      </ul>
       <h3 className = "text-xl font-bold">Code</h3>
     </div>
   );
