@@ -5,7 +5,7 @@ const Item: FC<{
   name: string;
   link: string;
 }> = ({ name, link }) => (
-  <p><Link href = {`${link}`}><a>{name}</a></Link></p>
+  <Link href = {`${link}`}><a>{name}</a></Link>
 )
 
 const Home: FC<{}> = () => {
