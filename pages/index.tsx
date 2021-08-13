@@ -24,7 +24,7 @@ const Home: FC<{}> = () => {
       <h3 className = "text-xl font-bold">Writing</h3>
       <ul className = "-ml-6">
         <li>
-          <Item name = "Contest Report" link = "reports/contest-creation.pdf">Written with William Dai. This is a reflection on the contests I've ran under MAC and some advice for those interested in running their own contests.(The TeX source is available <Link href = "reports/contest-creation.tex"><a>here</a></Link>.)</Item>
+          <Item name = "Contest Report" link = "reports/contest-creation.pdf">Written with William Dai. This is a reflection on the contests I've ran under MAC and some advice for those interested in running their own contests. (The TeX source is available <Link href = "reports/contest-creation.tex"><a>here</a></Link>.)</Item>
         </li>
       </ul>
       <h3 className = "text-xl font-bold">Code</h3>
