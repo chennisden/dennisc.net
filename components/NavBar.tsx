@@ -7,7 +7,12 @@ const NavBarItem: FC<{}> = ({children}) => (
 
 const NavBar: FC<{}> = () => {
     return (
-        <div className = "space-x-6 flex text-xl">
+        <div className = "px-20 py-6 space-x-6 flex text-xl">
+            <div style={{
+                flexGrow: 1,
+                flexDirection: "row",
+                justifyContent: "flex-end",
+            }}/>
             <NavBarItem>Math</NavBarItem>
             <NavBarItem>Writing</NavBarItem>
             <NavBarItem>Code</NavBarItem>
