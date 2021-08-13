@@ -13,9 +13,9 @@ const NavBar: FC<{}> = () => {
                 flexDirection: "row",
                 justifyContent: "flex-end",
             }}/>
-            <NavBarItem>Math</NavBarItem>
-            <NavBarItem>Writing</NavBarItem>
-            <NavBarItem>Code</NavBarItem>
+            <NavBarItem>math</NavBarItem>
+            <NavBarItem>writing</NavBarItem>
+            <NavBarItem>code</NavBarItem>
         </div>
     );
 };
