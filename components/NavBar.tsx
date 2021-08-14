@@ -2,12 +2,14 @@ import { FC } from "react";
 import NextLink from "next/link";
 
 const NavBarItem: FC<{}> = ({children}) => (
-    <NextLink href = {`${children}`}><a className="capitalize">{children}</a></NextLink>
+    <div className = "px-6 py-6">
+        <NextLink href = {`${children}`}><a className="capitalize hover:underline text-white">{children}</a></NextLink>
+    </div>
 );
 
 const NavBar: FC<{}> = () => {
     return (
-        <div className = "px-20 py-6 space-x-6 flex text-xl">
+        <div className = "bg-black px-20 flex text-xl">
             <div style={{
                 flexGrow: 1,
                 flexDirection: "row",
