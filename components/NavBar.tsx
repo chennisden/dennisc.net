@@ -9,7 +9,7 @@ const NavBarItem: FC<{}> = ({children}) => (
 
 const NavBar: FC<{}> = () => {
     return (
-        <div className = "bg-black px-20 flex text-xl">
+        <div className = "bg-black px-28 flex text-xl">
             <div style={{
                 flexGrow: 1,
                 flexDirection: "row",
