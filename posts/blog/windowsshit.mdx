@@ -19,7 +19,8 @@ profit off of blissfully unaware users.
 [^noitisnt]: I'm sure you could come up with a counterargument
 	for each point I am about to make.
 	I know that Powershell has grep-like functions,
-	that you can disable Microsoft's spyware (just kidding, [you can't](https://www.computerworld.com/article/3159424/you-still-can-t-turn-off-windows-10-s-built-in-spyware.html)),
+	that you can disable Microsoft's spyware
+	(just kidding, [you can't](https://www.computerworld.com/article/3159424/you-still-can-t-turn-off-windows-10-s-built-in-spyware.html)),
 	hack together Windows' half-assed symlinks, whatever.
 
 	But you're fighting the operating system the entire way.
@@ -208,7 +209,8 @@ and an education that you have to configure yourself.[^better]
 
 I do not even think the two approaches
 are antithetical to each other.
-When it comes to, for example, psychology,
+
+When it comes to, say, psychology,
 I will take the "Ubuntu" approach.
 I do not have much desire to figure out
 what psychology books are worth consulting on my own.
@@ -217,6 +219,7 @@ and there isn't so much room in life
 to care about the details of *everything* that you do.
 So I am willing to read Kahneman's *Thinking Fast and Slow*
 and make only surface-level attempts to fact check what I have read.
+
 But when it comes to mathematics,
 I really know what I am doing,
 so I would like the ability to drive my own education.
@@ -226,16 +229,13 @@ that I do not need or want to do.
 And when it comes to what classes I take,
 I'm sure I know my limitations better than my school's counselors,
 who probably do not remember a day of math beyond grade school.
-But I also rely on the expertise of, say, my physics teacher,
-because I have not made the effort to learn physics on my own
-and nor do I have any rivaling expertise.
 
 So when people debate over whether
 to generally improve the quality of education
 or to give students the opportunity to take charge themselves
 they are really being presented with a false dilemma.
 I am happy running Ubuntu on my desktop
-and Arch on my laptop
+and Arch on my laptop,
 and I would also be happy to go along the ride
 for something like US History
 while retaining the ability to drive my math education.
@@ -251,12 +251,117 @@ only serves to drive them away from Linux.
 
 And so the same goes with schools.
 When we get there,
-the right approach is to give students *choice*
+the right approach is to give students *choice*[^choice]
 in a modularized fashion.
 But we are not there.
 We are on Windows,
 and Windows is shit.
-So let's get off first.
+So let's get off first.[^opinion]
+[^choice]: It's a bit misleading to suggest
+	you should choose your style of education
+	the same way you choose between distros.
+		
+	You might have noticed a disconnect between
+	what the smartest kids need from school
+	and what the rest of the population want from it.
+	This difference sort of is like the difference between different distros,
+	but there are some key distinctions.
+
+	The smartest students *should* be getting
+	a different form of education compared to other people.
+	I don't mean to imply any absolutes, but it is a lot more likely
+	that gifted students should recieve gifted education
+	(usually in the form of taking college classes).
+	
+	This implies a form of value judgment.
+	That is, there is a distinguishable trait, "intelligence"
+	that determines the type of education you should recieve.
+	Whether this value judgment is correct, necessary, or accurate
+	is a topic for another day.
+
+	So it's not like I'm consciously choosing not to
+	critically think about AP filler.
+	It's just that I can't handle thinking about
+	AP filler along with everything else on my plate,
+	and the choice I have made is with what I am
+	consciously thinking about.
+	It is *bad* that I'm not thinking about AP filler,
+	whereas it is not bad to use a more beginner-friendly distro.
+
+[^opinion]: It doesn't actually matter whether you think
+	staying on Windows is fine or not.
+	Maybe you don't care how your computer functions
+	and honestly, that is fine.
+	It doesn't bother me that my keyboard is not ergonomic
+	or that my mouse is a barely functional office mouse.
+	But education is not something we can afford to just not care about.
+	
+	The *issues* with high school math education
+	versus any decent contest or higher math class
+	are similar to the issues with Windows versus Linux.
+	But the *urgency* is not.
+	
+	Look at what half the nation thinks about *vaccines* and *masks*.
+
+## Paradigms
+
+Using Windows limits your perspective on what computers can do.
+I'm not just talking about tools like grep, sed, and awk,
+or your package manager (though package managers are very sexy).
+What I'm referring to are *paradigms*.
+
+There are people who know in the back of their head
+that computers could *probably* perform X task.
+But with what they have in front of them
+they can't believe that it's possible.
+
+For instance, you can export your settings via dotfiles.
+This is something that is so obvious in hindsight,
+and it's something someone just has to explicitly tell you.
+Of course your settings are stored as text.
+I mean, how else would they be stored?
+The computer has to read them somehow.
+
+This is what I mean when I am referring to paradigms.
+Some people think settings are just knobs you screw around with on a GUI,
+and other people think that settings are contained and adjusted in text files.
+Both are valid ways of adjusting settings, so why is one paradigm better than the other?
+
+Because one of them is more fundamental than the other.
+It captures what is going on at a deeper level.
+When you're changing some knobs on a GUI,
+you're abstracting away the changing of text on a file.
+Sometimes this abstraction is desireable. Sometimes it's necessary.
+But it's important to understand you're making a tradeoff of understanding for convenience.
+
+This is a big deal when it comes down to education, particularly mathematics.
+
+In most Calculus BC classes, the idea of the limit is just abstracted away.
+"A limit is the behavior of a function as it gets close to a value,"
+your teacher says, though in much less precise terms.
+And then you do a number of "high-level manipulations" with them,
+like L'Hopitals or Taylor Series or whatever nonsense problem the exam throws at you.
+But you still don't know what a limit is.
+So you take all these fancy formulas and apply them blindly,
+and Calculus becomes like every other math class you've taken in high school:
+dreading the moment a problem comes up
+and blindly applying the solution you found on Google.[^analogy]
+[^analogy]: Just like when you have a problem on your machine,
+think "Oh god, not again," and google an answer on Stack Overflow
+and just paste it in.
+
+In fact, the first math class you take at a college is usually aimed
+towards rectifying these abstractions you're given in high school.[^group][^limits]
+
+[^group]: Take group theory as an example. Most people don't really know what a remainder is.
+	This is usually rectified when your abstract algebra class goes over groups.
+	(You can verify that addition and multiplication under a modulus is a group.)
+[^limits]: We've just discussed about limits.
+	There's a lot of layers to unpeel here, actually.
+	Generally, in the middle of precalculus or in the beginning of Calculus,
+	you are told that a limit is what happens when you get close to something.
+	Then you learn through delta-epsilon what "closer" really means,
+	and you learn what it *really* means through topology.
 
 ## Teachers aren't the problem
 
@@ -293,33 +398,33 @@ less than you think it is.
 The problem is that
 we are running "Windows"
 behind the scenes of education.
-The problem is that
-we are allowing people
+We are allowing people
 who have *total control* over our education
-to shift money into the hands of shitty textbook publishers
-who do not have our interests at heart.
-The problem is that
-we are not able to easily peer into
+to shift money into the hands of textbook publishers
+who do not have our interests at heart,
+and we aren't able to easily examine
 the inner workings of our education system
-or modify it.
+or modify them.
 
 Maybe the rest of your colleagues run on "Windows."
 Maybe you're still going to be forced to run "Windows" in some sense.
-Maybe the solution isn't as simple as switching to "Linux" wherever possible.
-But the solution is not buckling up and crying
-because being a better teacher, a better school, or a better district
-is not the magic bullet to make education perfect.
+At the end of the day, no matter how much
+you re-examine your teaching paradigms
+or give your students freedom,
+education won't be *fixed*.
+But does that mean the answer is
+continuing to blindly accept someone else's answers
+on how you should be teaching
+without thinking about them for yourself?
+Does that mean the answer is stagnating and giving up?
+I don't think so.
 
-The problem isn't that teachers are bad.
-Nor is it entirely with the school district.[^district]
+The problem isn't that teachers are bad, because they aren't.
+Nor is it entirely with the school district or state.[^district]
 The problem is that Windows is shit,
 and almost everyone is emphatically trying to deny
 that Windows is absolutely, undeniably, irredeemably shit. 
-[^district]: Though the district is often to blame for
+[^district]: Though the district and state are often to blame for
 	decisions that directly harm the welfare of students.
-	I am talking about objectively inane projects
-	such as the construction of a fence around schools
-	in order to "protect children"
-	even though it certainly and directly harms their mental health
-	by confirming everyone's suspicion:
-	school might as well be a prison.
+	How many times has California tried to get rid
+	of accelerated math?
