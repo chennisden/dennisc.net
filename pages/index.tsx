@@ -5,7 +5,7 @@ const Item: FC<{
   name: string;
   link: string;
 }> = ({ children, name, link }) => (
-  <span><Link href = {`${link}`}><a>{name}</a></Link><p className = "pl-6">{children}</p></span>
+  <span><Link href = {`${link}`}>{name}</Link><p className = "pl-6">{children}</p></span>
 );
 
 const Home: FC<{}> = () => {
@@ -28,6 +28,13 @@ const Home: FC<{}> = () => {
         </li>
       </ul>
       <h3 className = "text-xl font-bold">Code</h3>
+      <ul className = "-ml-6">
+        <li>
+          <Item name = "denniscv" link = "https://github.com/chennisden/denniscv">A LaTeX document class used to typeset CVs Scales to multiple pages.</Item>
+        </li>
+      </ul>
+      <p>If you are looking for each MAST or MAC, please visit <Link href = "https://www.mathadvance.org">mathadvance.org</Link>.</p>
+      <p>Those who want to reference my old writing or materials can find it at <Link href = "https://www.geometryexplorer.xyz">geometryexplorer.xyz</Link>.</p>
     </div>
   );
 };
