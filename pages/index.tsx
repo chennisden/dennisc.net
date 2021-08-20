@@ -5,7 +5,7 @@ const Item: FC<{
   name: string;
   link: string;
 }> = ({ children, name, link }) => (
-  <span><Link href = {`${link}`}>{name}</Link><p className = "pl-6">{children}</p></span>
+  <li><Link href = {`${link}`}>{name}</Link><p>{children}</p></li>
 );
 
 const Home: FC<{}> = () => {
@@ -16,22 +16,16 @@ const Home: FC<{}> = () => {
       <h2 className = "text-3xl font-bold">Top Links</h2>
       <p>These are the projects that people tend to be the most interested in.</p>
       <h3 className = "text-xl font-bold">Math</h3>
-      <ul className = "-ml-6">
-        <li>
-          <Item name = "Careful!" link = "resources/careful.pdf">A handout with commonly missed problems on select math contests and some psychology on how to avoid mistakes.</Item>
-        </li>
+      <ul>
+        <Item name = "Careful!" link = "resources/careful.pdf">A handout with commonly missed problems on select math contests and some psychology on how to avoid mistakes.</Item>
       </ul>
       <h3 className = "text-xl font-bold">Writing</h3>
-      <ul className = "-ml-6">
-        <li>
-          <Item name = "Contest Report" link = "reports/contest-creation.pdf">Written with William Dai. This is a reflection on the contests I've ran under MAC and some advice for those interested in running their own contests. (The TeX source is available <Link href = "reports/contest-creation.tex"><a>here</a></Link>.)</Item>
-        </li>
+      <ul>
+        <Item name = "Contest Report" link = "reports/contest-creation.pdf">Written with William Dai. This is a reflection on the contests I've ran under MAC and some advice for those interested in running their own contests. (The TeX source is available <Link href = "reports/contest-creation.tex"><a>here</a></Link>.)</Item>
       </ul>
       <h3 className = "text-xl font-bold">Code</h3>
-      <ul className = "-ml-6">
-        <li>
-          <Item name = "denniscv" link = "https://github.com/chennisden/denniscv">A LaTeX document class used to typeset CVs Scales to multiple pages.</Item>
-        </li>
+      <ul>
+        <Item name = "denniscv" link = "https://github.com/chennisden/denniscv">A LaTeX document class used to typeset CVs Scales to multiple pages.</Item>
       </ul>
       <p>If you are looking for each MAST or MAC, please visit <Link href = "https://www.mathadvance.org">mathadvance.org</Link>.</p>
       <p>Those who want to reference my old writing or materials can find it at <Link href = "https://www.geometryexplorer.xyz">geometryexplorer.xyz</Link>.</p>

@@ -4,7 +4,12 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-ul li:before {
-    content: '->'; /* Want to use Bootstrap right arrow */
-    padding-right: 7px;
+ul li {
+    list-style-type: '\2192';
+    padding-left: 8px;
+}
+
+ul {
+    list-style-position: outside;
+    padding-left: 10px;
 }
