@@ -9,7 +9,17 @@ const NavBarItem: FC<{}> = ({children}) => (
 
 const NavBar: FC<{}> = () => {
     return (
-        <div className = "bg-black px-28 flex text-xl">
+        <div className = "bg-black px-28 flex text-xl items-center">
+            <NextLink href="/">
+                <a>
+                    <img
+                        style={{ height: "35px" }}
+                        src="dcwhite.svg"
+                        color="white"
+                        alt="dc"
+                    />
+                </a>
+            </NextLink>
             <div style={{
                 flexGrow: 1,
                 flexDirection: "row",
