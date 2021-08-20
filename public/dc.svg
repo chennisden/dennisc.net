@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5.9000001mm"
+   height="5.9000001mm"
+   viewBox="0 0 5.9000001 5.9000002"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="dc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8"
+     inkscape:cx="-12.75"
+     inkscape:cy="-13"
+     inkscape:window-width="1423"
+     inkscape:window-height="860"
+     inkscape:window-x="246"
+     inkscape:window-y="75"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     units="in"
+     width="6.4mm" />
+  <defs
+     id="defs2">
+    <rect
+       x="113.95276"
+       y="95.244095"
+       width="386.07874"
+       height="147.96851"
+       id="rect4719" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-46.764872,-29.988178)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,16.271875,3.8364583)"
+       id="text4717"
+       style="font-size:24px;line-height:1.25;font-family:'Noto Music';-inkscape-font-specification:'Noto Music, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4719)"><tspan
+         x="113.95312"
+         y="117.08115"
+         id="tspan37625">δ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Noto Music';-inkscape-font-specification:'Noto Music, Normal';font-variant-ligatures:none;stroke-width:0.264583"
+       x="49.779034"
+       y="35.745178"
+       id="text7321"><tspan
+         sodipodi:role="line"
+         id="tspan7319"
+         style="stroke-width:0.264583"
+         x="49.779034"
+         y="35.745178">c</tspan></text>
+  </g>
+</svg>
