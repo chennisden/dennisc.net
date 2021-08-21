@@ -25,7 +25,7 @@ const Home: FC<{}> = () => {
       </ul>
       <h3 className = "text-xl font-bold">Code</h3>
       <ul>
-        <Item name = "denniscv" link = "https://github.com/chennisden/denniscv">A LaTeX document class used to typeset CVs Scales to multiple pages.</Item>
+        <Item name = "denniscv" link = "https://github.com/chennisden/denniscv">A LaTeX document class used to typeset CVs. Scales to multiple pages.</Item>
       </ul>
       <p>If you are looking for each MAST or MAC, please visit <Link href = "https://www.mathadvance.org">mathadvance.org</Link>.</p>
       <p>Those who want to reference my old writing or materials can find it at <Link href = "https://www.geometryexplorer.xyz">geometryexplorer.xyz</Link>.</p>

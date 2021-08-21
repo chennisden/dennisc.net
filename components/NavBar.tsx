@@ -15,7 +15,7 @@ const NavBar: FC<{}> = () => {
                     <img
                         style={{ height: "35px" }}
                         src="dcwhite.svg"
-                        color="white"
+                        className="text-white"
                         alt="dc"
                     />
                 </a>
