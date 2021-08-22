@@ -6,8 +6,8 @@ const Link: FC<{
     href: string;
 }> = ({ children, className, href }) => {
     return (
-        <NextLink href = {href} passHref>
-            <a className = {className = `${className} text-blue-500 hover:underline`}>{children}</a>
+        <NextLink href={href} passHref>
+            <a className={`${className} text-blue-500 hover:underline`}>{children}</a>
         </NextLink>
     );
 };
