@@ -10,7 +10,7 @@ const Item: FC<{
 
 const Home: FC<{}> = () => {
   return (
-    <div className="mx-28 mt-8 space-y-2">
+    <div className="self-center mx-12 sm:mx-28 md:max-w-screen-sm mt-8 space-y-2">
       <h1 className="text-5xl font-bold">Dennis Chen's Website</h1>
       <p>Welcome to my personal website. You can find my math exposition, writing, and code here.</p>
       <h2 className="text-3xl font-bold">Top Links</h2>
