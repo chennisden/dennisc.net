@@ -13,8 +13,8 @@ const NavBarItem: FC<{}> = ({ children }) => (
 
 const NavBar: FC<{}> = () => {
   return (
-    <div className="bg-black">
-      <div className="max-w-screen-md flex mx-12 sm:mx-28 text-xl items-center">
+    <div className="bg-black grid justify-center">
+      <div className="max-w-screen-md flex mx-12 sm:mx-28 text-xl max-w-screen-md items-center">
         <NextLink href="/">
           <a>
             <img
