@@ -4,22 +4,12 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter');
-
 ul li {
-    list-style-type: '\2192';
-    padding-left: 8px;
+  list-style-type: "\2192";
+  padding-left: 8px;
 }
 
 ul {
-    list-style-position: outside;
-    padding-left: 10px;
-}
-
-h1 {
-	font-family: "Inter";
-}
-
-h2 {
-	font-family: "Inter";
+  list-style-position: outside;
+  padding-left: 10px;
 }
