@@ -50,7 +50,7 @@ const Footer: FC<{}> = () => {
           </div>
         </div>
         <hr className="my-6" />
-        <div className="grid grid-cols-4 flex place-items-center text-4xl text-white">
+        <div className="flex justify-evenly align-center text-4xl text-white">
           <NextLink href="https://github.com/chennisden">
             <a>
               <AiFillGithub />
