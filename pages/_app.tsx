@@ -12,8 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <div className="min-h-screen flex flex-col">
         <NavBar />
+        <div className="my-6" />
         <Component {...pageProps} />
-        <div className="mb-12 flex-grow" />
+        <div className="my-6" />
         <Footer />
       </div>
     </div>
