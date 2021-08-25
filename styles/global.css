@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 ul li {
-    list-style-type: '\2192';
-    padding-left: 8px;
+  list-style-type: "\2192";
+  padding-left: 8px;
 }
 
 ul {

@@ -4,7 +4,9 @@ import NextLink from "next/link";
 const NavBarItem: FC<{}> = ({ children }) => (
     <div className="px-6 py-6">
         <NextLink href={`${children}`}>
-            <a className="capitalize hover:underline text-white">{children}</a>
+            <a className="capitalize font-bold hover:underline text-white">
+                {children}
+            </a>
         </NextLink>
     </div>
 );
