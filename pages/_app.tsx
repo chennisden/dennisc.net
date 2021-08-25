@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <NavBar />
         <div className="my-6" />
         <Component {...pageProps} />
-        <div className="my-6" />
+        <div className="flex-grow my-6" />
         <Footer />
       </div>
     </div>
