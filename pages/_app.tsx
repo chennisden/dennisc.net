@@ -3,6 +3,9 @@ import Head from "next/head";
 import "../styles/global.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Back from "../components/Back";
+
+const cURL = 0; // current URL
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="min-h-screen flex flex-col">
         <NavBar />
         <div className="my-6" />
+        <Back href="." />
         <Component {...pageProps} />
         <div className="flex-grow my-6" />
         <Footer />
