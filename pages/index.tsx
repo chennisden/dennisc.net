@@ -1,4 +1,4 @@
-import Link from "../components/Link";
+import Link from "../utils/Link";
 import { FC } from "react";
 
 const Item: FC<{
@@ -13,13 +13,13 @@ const Item: FC<{
 
 const Home: FC<{}> = () => {
   return (
-    <div className="self-center mx-12 sm:mx-28 md:max-w-screen-sm space-y-2">
-      <h1 className="text-5xl font-bold">Dennis Chen's Website</h1>
+    <div className="self-center mx-12 sm:mx-28 w-full max-w-screen-sm space-y-2 ">
+      <h1 className="text-4xl font-bold">Dennis Chen's Website</h1>
       <p>
         Welcome to my personal website. You can find my math exposition,
         writing, and code here.
       </p>
-      <h2 className="text-3xl font-bold">Top Links</h2>
+      <h2 className="text-2xl font-bold">Top Links</h2>
       <p>
         This is my content that I think is most relevant, has been referenced
         more often, or have garnered the most interest.
