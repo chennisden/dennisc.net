@@ -4,7 +4,7 @@ import NextLink from "next/link";
 const NavBarItem: FC<{}> = ({ children }) => (
   <div className="px-6 py-6">
     <NextLink href={`${children}`}>
-      <a className="capitalize font-bold hover:underline text-white">
+      <a className="capitalize font-bold hover:underline focus:text-blue-500 text-white">
         {children}
       </a>
     </NextLink>
@@ -17,11 +17,11 @@ const NavBar: FC<{}> = () => {
       <div className="w-full max-w-screen-md mx-auto flex justify-between">
         <div className="flex items-center">
           <NextLink href="/">
-            <a>
+            <a className="focus:text-blue-400">
               <img
                 style={{ height: "35px" }}
                 src="dcwhite.svg"
-                className="text-white"
+                className="text-red"
                 alt="dc"
               />
             </a>
