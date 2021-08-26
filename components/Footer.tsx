@@ -51,25 +51,17 @@ const Footer: FC<{}> = () => {
         </div>
         <hr className="my-6" />
         <div className="flex justify-evenly align-center text-4xl text-white">
-          <Link href="https://github.com/chennisden">
-            <a>
-              <AiFillGithub />
-            </a>
+          <Link href="https://github.com/chennisden" className="hover:text-blue-400">
+            <AiFillGithub />
           </Link>
-          <Link href="mailto:dchen@dennisc.net">
-            <a>
-              <AiOutlineMail />
-            </a>
+          <Link href="mailto:dchen@dennisc.net" className="hover:text-blue-400">
+            <AiOutlineMail />
           </Link>
-          <Link href="https://www.youtube.com/channel/UChpIX4Ue1DmLm8qeR0ANbRg">
-            <a>
-              <AiFillYoutube />
-            </a>
+          <Link href="https://www.youtube.com/channel/UChpIX4Ue1DmLm8qeR0ANbRg" className="hover:text-blue-400">
+            <AiFillYoutube />
           </Link>
-          <Link href="https://twitch.tv/chennis199">
-            <a>
-              <FaTwitch />
-            </a>
+          <Link href="https://twitch.tv/chennis199" className="hover:text-blue-400">
+            <FaTwitch />
           </Link>
         </div>
       </div>
