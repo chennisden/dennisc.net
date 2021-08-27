@@ -9,7 +9,7 @@ const NavBarItem: FC<{}> = ({ children }) => {
     <div className="px-6 py-6">
       <NextLink href={`${children}`}>
         <a
-          className={`capitalize font-bold hover:underline text-white focus:outline-none focus-visible:border-2 focus-visible:border-dotted focus-visible:border-white focus-visible:rounded
+          className={`capitalize font-bold hover:underline text-white focus-visible:outline-white
           ${paths[1] == `${children}` && "text-blue-400"
             }`}
         >
@@ -26,7 +26,7 @@ const NavBar: FC<{}> = () => {
       <div className="w-full max-w-screen-md mx-auto flex justify-between">
         <div className="flex items-center">
           <NextLink href="/">
-            <a>
+            <a className="focus-visible:outline-white">
               <img
                 style={{ height: "35px" }}
                 src="dcwhite.svg"

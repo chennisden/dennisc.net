@@ -968,10 +968,11 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
     extend: {
+      outline: ['hover', 'focus', 'focus-visible'],
       borderWidth: ['hover', 'focus', 'focus-visible'],
       borderRadius: ['hover', 'focus', 'focus-visible'],
       borderStyle: ['hover', 'focus', 'focus-visible'],
-      borderColor: ['focus-visible']
+      borderColor: ['hover', 'focus', 'focus-visible']
     },
   },
   plugins: [],
