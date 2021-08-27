@@ -8,7 +8,7 @@ const LinkBox: FC<{ name: string; link: string; desc?: string }> = ({
 }) => {
   return (
     <NextLink href={`${link}`}>
-      <a className="rounded-lg border-2 border-gray-200 hover:text-blue-600 px-5 py-4 space-y-2">
+      <a className="rounded-lg border hover:text-blue-600 px-5 py-4 space-y-2">
         <div className="text-xl font-bold">{`${name}`}</div>
         <div>{`${desc}`}</div>
       </a>

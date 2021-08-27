@@ -11,9 +11,7 @@ const Link: FC<{ href: string; className?: string }> = ({
 }) => {
   return (
     <NextLink href={`${href}`}>
-      <a className={`${className} hover:underline focus:ring-1 ring-white`}>
-        {children}
-      </a>
+      <a className={`${className} hover:underline`}>{children}</a>
     </NextLink>
   );
 };
