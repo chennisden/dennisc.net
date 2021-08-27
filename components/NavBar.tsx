@@ -9,9 +9,9 @@ const NavBarItem: FC<{}> = ({ children }) => {
     <div className="px-6 py-6">
       <NextLink href={`${children}`}>
         <a
-          className={`capitalize font-bold hover:underline text-white ${
-            paths[1] == `${children}` && "text-blue-400"
-          }`}
+          className={`capitalize font-bold hover:underline text-white focus:outline-none focus-visible:border-2 focus-visible:border-dotted focus-visible:border-white focus-visible:rounded
+          ${paths[1] == `${children}` && "text-blue-400"
+            }`}
         >
           {children}
         </a>

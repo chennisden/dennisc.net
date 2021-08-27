@@ -967,6 +967,12 @@ module.exports = {
     width: ['responsive'],
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
+    extend: {
+      borderWidth: ['hover', 'focus', 'focus-visible'],
+      borderRadius: ['hover', 'focus', 'focus-visible'],
+      borderStyle: ['hover', 'focus', 'focus-visible'],
+      borderColor: ['focus-visible']
+    },
   },
   plugins: [],
 }
