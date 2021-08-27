@@ -11,7 +11,9 @@ const Link: FC<{ href: string; className?: string }> = ({
 }) => {
   return (
     <NextLink href={`${href}`}>
-      <a className={`${className} hover:underline focus:text-blue-400`}>{children}</a>
+      <a className={`${className} hover:underline focus:ring-1 ring-white`}>
+        {children}
+      </a>
     </NextLink>
   );
 };
@@ -51,16 +53,25 @@ const Footer: FC<{}> = () => {
         </div>
         <hr className="my-6" />
         <div className="flex justify-evenly align-center text-4xl text-white">
-          <Link href="https://github.com/chennisden" className="hover:text-blue-400">
+          <Link
+            href="https://github.com/chennisden"
+            className="hover:text-blue-400"
+          >
             <AiFillGithub />
           </Link>
           <Link href="mailto:dchen@dennisc.net" className="hover:text-blue-400">
             <AiOutlineMail />
           </Link>
-          <Link href="https://www.youtube.com/channel/UChpIX4Ue1DmLm8qeR0ANbRg" className="hover:text-blue-400">
+          <Link
+            href="https://www.youtube.com/channel/UChpIX4Ue1DmLm8qeR0ANbRg"
+            className="hover:text-blue-400"
+          >
             <AiFillYoutube />
           </Link>
-          <Link href="https://twitch.tv/chennis199" className="hover:text-blue-400">
+          <Link
+            href="https://twitch.tv/chennis199"
+            className="hover:text-blue-400"
+          >
             <FaTwitch />
           </Link>
         </div>
