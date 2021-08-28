@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Link from "utils/Link";
+import Link from "@/utils/Link";
 
 const Back: FC<{ href: string }> = ({ href }) => {
   return (
