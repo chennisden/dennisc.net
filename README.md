@@ -31,14 +31,14 @@ Here's how it works.
 - Every `.mdx` file in a particular directory
     (which is passed in, because I have three blog secttions)
     has its filepath read in the `AllPages(dir)` function
-    inside of `api/Pages`.
+    inside of `api/GetPages.ts`.
 - Using `graymatter`,
     we strip out the metadata
     so we can display it on the pages.
     This data is placed into an instance
     of the `Page` interface.
-    This is also done in `api/GetPages`.
-- In `api/GetPages`,
+    This is also done in `api/GetPages.ts`.
+- In `api/GetPages.ts`,
     a sorting function will be created
     based on date.
     Because of a few special circumstances,
@@ -50,7 +50,7 @@ Here's how it works.
     Because the code in the slugs
     will be reused so often,
     it will be abstracted out
-    into `api/RenderPages`.
+    into `api/RenderPages.ts`.
     - For `writing/all`,
         the `AllPages` function will be called
         on `posts/blog`, `posts/essay`, and `posts/tech`.
