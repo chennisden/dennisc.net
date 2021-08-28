@@ -44,7 +44,7 @@ Here's how it works.
     Because of a few special circumstances,
     I will *not* be calling it by default
     when I return all the pages.
-- We take our array of posts
+- We take our array of pages
     and render them in
     `[slug].tsx` in the appropriate directory.
     Because the code in the slugs
@@ -60,3 +60,5 @@ Here's how it works.
         But because the main pages in my website do not have dates,
         and we are not rendering a list of the main pages,
         we do not sort the dates.
+- We also render the list of pages
+    in `RenderPagesList.ts`.
