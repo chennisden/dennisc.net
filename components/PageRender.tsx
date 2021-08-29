@@ -2,6 +2,8 @@ import Head from "next/head";
 import PageWrapper from "@/components/PageWrapper";
 import { FC } from "react";
 import { formatDate } from "@/utils/DateUtils";
+import { getMDXComponent } from "mdx-bundler/client";
+import React from "react";
 
 const PageRender: FC<{ props }> = ({ props }) => {
   return (
@@ -16,7 +18,6 @@ const PageRender: FC<{ props }> = ({ props }) => {
       <PageWrapper>
         <h1>{props.data.title}</h1>
         {props.data.date && <p>Published on {formatDate(props.data.date)}.</p>}
-        <p>{props.content}</p>
       </PageWrapper>
     </>
   );
