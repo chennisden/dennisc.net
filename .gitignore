@@ -66,3 +66,9 @@ yarn-error.log*
 
 # die latexindent
 __latexindent_temp.tex
+
+#####
+#IDE#
+#####
+
+*.vscode

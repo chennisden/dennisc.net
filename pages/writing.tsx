@@ -1,5 +1,5 @@
-import Link from "@/utils/Link";
-import LinkBox from "@/utils/LinkBox";
+import Link from "@/components/Link";
+import LinkBox from "@/components/LinkBox";
 import { FC } from "react";
 
 const Writing: FC<{}> = () => {

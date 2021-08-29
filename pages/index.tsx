@@ -1,4 +1,4 @@
-import Link from "@/utils/Link";
+import Link from "@/components/Link";
 import { FC } from "react";
 
 const Item: FC<{
