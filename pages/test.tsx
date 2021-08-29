@@ -13,7 +13,7 @@ export default function Page(props) {
 }
 
 export async function getStaticProps(context) {
-  const GetPages = getPages("posts");
+  const GetPages = getPages("posts/essay");
   return {
     props: {
       GetPages,

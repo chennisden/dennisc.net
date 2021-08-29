@@ -22,6 +22,24 @@ and Tailwind is used for styling the frontend.
 
 This project is using `yarn` as its package manager.
 
+## Structure
+
+Very roughly, this follows
+[Tania Rascia's](https://www.taniarascia.com/react-architecture-directory-structure/#utils) guide.
+
+- public: Any files I want the public to be able to view
+  (hence the name).
+  - resources: PDFs that would be filed under math.
+  - reports: PDFs that would be filed under writing.
+- styles: Self-explanatory.
+- components: Anything that is mostly frontend.
+  Lines can get a little blurry between components and utils.
+- utils: Anything more complicated than a slew of `<div className="...">`
+  Currently used for dynamic routing, [comments](https://github.com/maggie-j-liu/reactive), etc.
+- posts: Here, all the `.mdx` files for my writing are contained.
+  The pages are read via some functions in `utils` and rendered with `[slug].tsx`.
+  (The page rendering function called in `[slug].tsx` is also in `utils`.)
+
 ## Blog
 
 The blog is compiled and rendered
