@@ -1,3 +1,4 @@
+import PageWrapper from "@/components/PageWrapper";
 import Link from "@/components/Link";
 import { FC } from "react";
 
@@ -13,7 +14,7 @@ const Item: FC<{
 
 const Home: FC<{}> = () => {
   return (
-    <div className="self-center mx-12 sm:mx-28 w-full max-w-screen-sm space-y-2 ">
+    <PageWrapper>
       <h1 className="text-4xl font-bold">Dennis Chen's Website</h1>
       <p>
         Welcome to my personal website. You can find my math exposition,
@@ -66,7 +67,7 @@ const Home: FC<{}> = () => {
         </Link>
         .
       </p>
-    </div>
+    </PageWrapper>
   );
 };
 
