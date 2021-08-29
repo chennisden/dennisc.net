@@ -12,6 +12,9 @@ const PageList: FC<{ parentDir: string; pageList: Page[] }> = ({
       {pageList.map((page) => {
         return (
           <LinkBox
+            key={`${parentDir}/${page.slug}`}
+            // We use this as our key because
+            // it is guaranteed to be unique.
             name={page.data.title}
             link={`${parentDir}/${page.slug}`}
             desc={page.data.desc}
