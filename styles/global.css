@@ -1,8 +1,18 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+}
 
 ul li {
   list-style-type: "\2192";
@@ -10,6 +20,6 @@ ul li {
 }
 
 ul {
-    list-style-position: outside;
-    padding-left: 10px;
+  list-style-position: outside;
+  padding-left: 10px;
 }

@@ -15,17 +15,17 @@ const Item: FC<{
 const Home: FC<{}> = () => {
   return (
     <PageWrapper>
-      <h1 className="text-4xl font-bold">Dennis Chen's Website</h1>
+      <h1>Dennis Chen's Website</h1>
       <p>
         Welcome to my personal website. You can find my math exposition,
         writing, and code here.
       </p>
-      <h2 className="text-2xl font-bold">Top Links</h2>
+      <h2>Top Links</h2>
       <p>
         This is my content that I think is most relevant, has been referenced
         more often, or have garnered the most interest.
       </p>
-      <h3 className="text-xl font-bold">Math</h3>
+      <h3>Math</h3>
       <ul>
         <Item name="Math Advance!" link="https://www.mathadvance.org">
           Math Advance! is the parent organization of MAC, the group behind the
@@ -38,7 +38,7 @@ const Home: FC<{}> = () => {
           some psychology on how to avoid mistakes.
         </Item>
       </ul>
-      <h3 className="text-xl font-bold">Writing</h3>
+      <h3>Writing</h3>
       <ul>
         <Item name="Contest Report" link="reports/contest-creation.pdf">
           Written with William Dai. This is a reflection on the contests I've
@@ -50,7 +50,7 @@ const Home: FC<{}> = () => {
           .)
         </Item>
       </ul>
-      <h3 className="text-xl font-bold">Code</h3>
+      <h3>Code</h3>
       <ul>
         <Item name="denniscv" link="https://github.com/chennisden/denniscv">
           A LaTeX document class used to typeset CVs. Scales to multiple pages.

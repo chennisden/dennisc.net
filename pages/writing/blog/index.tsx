@@ -1,16 +1,17 @@
-import { getPages } from "@/utils/GetPages";
+import { getPages } from "@/utils/PageUtils";
 import PageWrapper from "@/components/PageWrapper";
 import PageList from "@/components/PageList";
 
 export default function Page(props) {
   return (
     <PageWrapper>
-      <PageList parentDir="posts/blog" pageList={props.pages} />
+      <h1>Blog Posts</h1>
+      <PageList parentDir="blog" pageList={props.pages} />
     </PageWrapper>
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const pages = getPages("posts/blog");
   return {
     props: {

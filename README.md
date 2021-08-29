@@ -39,6 +39,9 @@ Very roughly, this follows
 - posts: Here, all the `.mdx` files for my writing are contained.
   The pages are read via some functions in `utils` and rendered with `[slug].tsx`.
   (The page rendering function called in `[slug].tsx` is also in `utils`.)
+- pages: Any pages that I think are worth pulling out `tsx` proper.
+- home: Any pages in the index directory that I think are easier
+  written with Markdown.
 
 ## Blog
 
@@ -71,7 +74,7 @@ Here's how it works.
   Because the code in the slugs
   will be reused so often,
   it will be abstracted out
-  into `api/RenderPages.ts`.
+  into `api/PageRender.ts`.
   - For `writing/all`,
     the `AllPages` function will be called
     on `posts/blog`, `posts/essay`, and `posts/tech`.
@@ -80,6 +83,8 @@ Here's how it works.
     the `AllPages` function will be called as usual.
     But because the main pages in my website do not have dates,
     and we are not rendering a list of the main pages,
-    we do not sort the dates.
+    we do not sort the dates automatically.
+    We also render the pages in `home` in our top-level directory,
+    because I like to also write my stuff in markdown.
 - We also render the list of pages
   in `RenderPagesList.ts`.

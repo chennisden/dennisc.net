@@ -7,11 +7,10 @@ const NavBarItem: FC<{}> = ({ children }) => {
   const paths = router.pathname.split("/");
   return (
     <div className="px-6 py-6">
-      <NextLink href={`${children}`}>
+      <NextLink href={`/${children}`}>
         <a
           className={`capitalize font-bold hover:underline text-white focus-visible:outline-white
-          ${paths[1] == `${children}` && "text-blue-400"
-            }`}
+          ${paths[1] == `${children}` && "text-blue-400"}`}
         >
           {children}
         </a>
