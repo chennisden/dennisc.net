@@ -12,7 +12,15 @@ export default function PostPage(props) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const source = fs.readFileSync(`pages/${params.slug}.mdx`);
+  var slug: string[];
+
+  if (typeof params.slug === "string") {
+    slug = [params.slug];
+  } else {
+    slug = params.slug;
+  }
+
+  const source = fs.readFileSync(`pages/${slug[0]}.mdx`);
   const { content, data } = matter(source);
 
   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
@@ -47,10 +55,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const pageDir = path.join(process.cwd(), "pages");
-
   // https://coderrocketfuel.com/article/recursively-list-all-the-files-in-a-directory-using-node-js
-  const getAllFiles = function (dirPath, arrayOfFiles) {
+  const getAllFiles = function (dirPath, arrayOfFiles: string[]) {
     const files = fs.readdirSync(dirPath);
 
     arrayOfFiles = arrayOfFiles || [];
