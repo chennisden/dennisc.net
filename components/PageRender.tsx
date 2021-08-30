@@ -5,7 +5,11 @@ import { formatDate } from "@/utils/DateUtils";
 import { getMDXComponent } from "mdx-bundler/client";
 import React from "react";
 
-const PageRender: FC<{ props }> = ({ props }) => {
+const PageRender: FC<{ props }> = ({ props, children }) => {
+  const Content = React.useMemo(
+    () => getMDXComponent(props.code),
+    [props.code]
+  );
   return (
     <>
       <Head>
@@ -18,6 +22,7 @@ const PageRender: FC<{ props }> = ({ props }) => {
       <PageWrapper>
         <h1>{props.data.title}</h1>
         {props.data.date && <p>Published on {formatDate(props.data.date)}.</p>}
+        <Content />
       </PageWrapper>
     </>
   );
