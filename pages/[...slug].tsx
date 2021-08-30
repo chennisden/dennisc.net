@@ -12,9 +12,7 @@ export default function PostPage(props) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const source = fs.readFileSync(
-    `posts/${params.slug[0]}/${params.slug[1]}.mdx`
-  );
+  const source = fs.readFileSync(`pages/${params.slug}.mdx`);
   const { content, data } = matter(source);
 
   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
@@ -49,19 +47,41 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  function getPostPaths(folder: string) {
-    const postPaths = getPages(`posts/${folder}`)
-      .map((page) => {
-        const path = page.slug;
-        return path;
-      })
-      .map((path) => ({ params: { slug: [folder, path] } }));
-    return postPaths;
-  }
-  const blogPaths = getPostPaths("blog");
-  const essayPaths = getPostPaths("essays");
-  const techPaths = getPostPaths("tech");
-  const paths = [...blogPaths, ...essayPaths, ...techPaths];
+  const pageDir = path.join(process.cwd(), "pages");
+
+  // https://coderrocketfuel.com/article/recursively-list-all-the-files-in-a-directory-using-node-js
+  const getAllFiles = function (dirPath, arrayOfFiles) {
+    const files = fs.readdirSync(dirPath);
+
+    arrayOfFiles = arrayOfFiles || [];
+
+    files.forEach(function (file) {
+      if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+        arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
+      } else {
+        arrayOfFiles.push(path.join("/", file));
+      }
+    });
+
+    return arrayOfFiles;
+  };
+
+  const allFiles = getAllFiles("pages", []).map((file) => {
+    const fileAsArray = file.split("/");
+    fileAsArray.splice(0, 1);
+    return fileAsArray;
+  });
+
+  const paths = allFiles
+    .filter((path) => /\.mdx$/.test(path[path.length - 1]))
+    .map((path) => {
+      path[path.length - 1] = path[path.length - 1].replace(/\.mdx$/, "");
+      return {
+        params: {
+          slug: path,
+        },
+      };
+    });
   return {
     paths,
     fallback: false,
