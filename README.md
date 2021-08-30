@@ -88,3 +88,5 @@ Here's how it works.
     because I like to also write my stuff in markdown.
 - We also render the list of pages
   in `RenderPagesList.ts`.
+- Finally, we use `mdx-bundler` to convert pages
+  into JSX and render them.
