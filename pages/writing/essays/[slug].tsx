@@ -1,15 +1,17 @@
-import PageRender from "@/components/PageRender";
+import React from "react";
+import fs from "fs";
+import matter from "gray-matter";
+import { bundleMDX } from "mdx-bundler";
+import { getMDXComponent } from "mdx-bundler/client";
+import path from "path";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { getPages } from "@/utils/PageUtils";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import React from "react";
-import { getMDXComponent } from "mdx-bundler/client";
-import { bundleMDX } from "mdx-bundler";
 
-export default function Page({ code }) {
-  const Content = React.useMemo(() => getMDXComponent(code), [code]);
+export default function PostPage({ code, frontMatter }) {
+  const Content = React.useMemo(
+    () => getMDXComponent(code, frontMatter),
+    [code, frontMatter]
+  );
   return <Content />;
 }
 
@@ -38,23 +40,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     );
   }
 
-  const { code } = await bundleMDX(content);
+  const { code, frontmatter } = await bundleMDX(content);
 
   return {
     props: {
       code,
+      frontmatter,
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const essayPaths = getPages("posts/essays").map((page) => {
-    const path = page.slug;
-    return path;
-  });
-  const paths = essayPaths
-    .map((path) => path.replace(/\.mdx$/, ""))
-    .map((slug) => ({ params: { slug: `${slug}` } }));
+  const paths = getPages("posts/essays")
+    .map((page) => {
+      const path = page.slug;
+      return path;
+    })
+    .map((slug) => ({ params: { slug } }));
   return {
     paths,
     fallback: false,
