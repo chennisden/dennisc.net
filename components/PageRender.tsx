@@ -5,7 +5,7 @@ import { formatDate } from "@/utils/DateUtils";
 import { getMDXComponent } from "mdx-bundler/client";
 import React from "react";
 
-const PageRender: FC<{ props }> = ({ props, children }) => {
+const PageRender: FC<{ props }> = ({ props }) => {
   const Content = React.useMemo(
     () => getMDXComponent(props.code),
     [props.code]

@@ -25,7 +25,7 @@ export async function getStaticProps() {
     page.slug = `tech/${page.slug}`;
     return page;
   });
-  const pages = sortPagesByDate(essayPages.concat(blogPages, techPages));
+  const pages = sortPagesByDate([...essayPages, ...blogPages, ...techPages]);
   return {
     props: {
       pages,

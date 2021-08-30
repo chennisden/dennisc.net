@@ -1,4 +1,4 @@
-import { getPages } from "@/utils/PageUtils";
+import { getPages, sortPagesByDate } from "@/utils/PageUtils";
 import PageWrapper from "@/components/PageWrapper";
 import PageList from "@/components/PageList";
 
@@ -12,7 +12,7 @@ export default function Page(props) {
 }
 
 export async function getStaticProps() {
-  const pages = getPages("posts/blog");
+  const pages = sortPagesByDate(getPages("posts/blog"));
   return {
     props: {
       pages,
