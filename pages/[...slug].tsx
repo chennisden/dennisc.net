@@ -82,9 +82,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     .filter((path) => /\.mdx$/.test(path[path.length - 1]))
     .map((path) => {
       path[path.length - 1] = path[path.length - 1].replace(/\.mdx$/, "");
+      const truePath: string[] = path;
       return {
         params: {
-          slug: path,
+          slug: truePath,
         },
       };
     });
