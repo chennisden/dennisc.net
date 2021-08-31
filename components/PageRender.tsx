@@ -1,5 +1,4 @@
 import Head from "next/head";
-import PageWrapper from "@/components/PageWrapper";
 import MDXComponents from "@/utils/MDXComponents";
 import { FC } from "react";
 import { formatDate } from "@/utils/DateUtils";
@@ -20,11 +19,9 @@ const PageRender: FC<{ props }> = ({ props }) => {
           content={`${props.data.desc || props.data.title}`}
         />
       </Head>
-      <PageWrapper>
-        <h1>{props.data.title}</h1>
-        {props.data.date && <p>Published on {formatDate(props.data.date)}.</p>}
-        <Content components={MDXComponents} />
-      </PageWrapper>
+      <h1>{props.data.title}</h1>
+      {props.data.date && <p>Published on {formatDate(props.data.date)}.</p>}
+      <Content components={MDXComponents} />
     </>
   );
 };

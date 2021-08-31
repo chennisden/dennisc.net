@@ -17,8 +17,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="min-h-screen flex flex-col">
         <NavBar />
         <div className="my-6" />
-        {router.pathname != "/" && <Back href="." />}
-        <Component {...pageProps} />
+        <div className="self-center mx-12 sm:mx-28 w-full max-w-screen-sm space-y-2 ">
+          {router.pathname != "/" && <Back href="." />}
+          <Component {...pageProps} />
+        </div>
         <div className="flex-grow my-6" />
         <Footer />
       </div>

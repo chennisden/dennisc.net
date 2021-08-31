@@ -1,12 +1,10 @@
 import Link from "@/components/Link";
-import LinkBox from "@/components/LinkBox";
-import PageWrapper from "@/components/PageWrapper";
 import PageList from "@/components/PageList";
 import { FC } from "react";
 
 const Writing: FC<{}> = () => {
   return (
-    <PageWrapper>
+    <>
       <h1>Writing</h1>
       <p>
         My writing is separated into a couple of categories. (See{" "}
@@ -50,7 +48,7 @@ const Writing: FC<{}> = () => {
           },
         ]}
       />
-    </PageWrapper>
+    </>
   );
 };
 

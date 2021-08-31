@@ -1,14 +1,12 @@
 import { getPages, sortPagesByDate } from "@/utils/PageUtils";
-import { Page } from "@/utils/types";
-import PageWrapper from "@/components/PageWrapper";
 import PageList from "@/components/PageList";
 
 export default function All(props) {
   return (
-    <PageWrapper>
+    <>
       <h1>All</h1>
       <PageList parentDir="" pageList={props.pages} />
-    </PageWrapper>
+    </>
   );
 }
 
