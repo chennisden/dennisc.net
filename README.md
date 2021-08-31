@@ -22,6 +22,10 @@ and Tailwind is used for styling the frontend.
 
 This project is using `yarn` as its package manager.
 
+## Running
+
+Clone the repository and run `yarn dev`.
+
 ## Structure
 
 Very roughly, this follows
@@ -32,15 +36,16 @@ Very roughly, this follows
   - resources: PDFs that would be filed under math.
   - reports: PDFs that would be filed under writing.
 - styles: Self-explanatory.
-- components: Anything that is mostly frontend.
+- components: Anything that is mostly visual.
   Lines can get a little blurry between components and utils.
 - utils: Anything more complicated than a slew of `<div className="...">`
   Currently used for dynamic routing, [comments](https://github.com/maggie-j-liu/reactive), etc.
 - posts: Here, all the `.mdx` files for my writing are contained.
   The pages are read via some functions in `utils` and rendered with `[slug].tsx`.
   (The page rendering function called in `[slug].tsx` is also in `utils`.)
-- pages: Any pages that I think are worth pulling out `tsx` proper.
-- home: Any pages in the index directory that I think are easier
+- pages: Pages that are not part of the blog; that is, anything in the main website.
+- home: Any pages in the index 
+directory that I think are easier
   written with Markdown.
 
 ## Blog

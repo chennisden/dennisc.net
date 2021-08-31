@@ -38,7 +38,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     );
   }
 
-  const { code } = await bundleMDX(content);
+  const POST_PATH = path.join(process.cwd(), "posts");
+
+  const { code } = await bundleMDX(content, {});
 
   return {
     props: {
