@@ -4,6 +4,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
 import path from "path";
+import {getPathsRecurse } from "@/utils/PageUtils";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 export default function PostPage(props) {
@@ -19,7 +20,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     slug = params.slug;
   }
 
-  const source = fs.readFileSync(`pages/${slug[0]}.mdx`);
+  const pagePath = `pages${slug.map((str) => `/${str}`)}.mdx`;
+
+  console.log(pagePath);
+  const source = fs.readFileSync(pagePath);
   const { content, data } = matter(source);
 
   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
@@ -54,24 +58,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // https://coderrocketfuel.com/article/recursively-list-all-the-files-in-a-directory-using-node-js
-  const getAllFiles = function (dirPath, arrayOfFiles: string[]) {
-    const files = fs.readdirSync(dirPath);
 
-    arrayOfFiles = arrayOfFiles || [];
-
-    files.forEach(function (file) {
-      if (fs.statSync(dirPath + "/" + file).isDirectory()) {
-        arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
-      } else {
-        arrayOfFiles.push(path.join("/", file));
-      }
-    });
-
-    return arrayOfFiles;
-  };
-
-  const allFiles = getAllFiles("pages", []).map((file) => {
+  const allFiles = getPathsRecurse("pages", []).map((file) => {
     const fileAsArray = file.split("/");
     fileAsArray.splice(0, 1);
     return fileAsArray;
