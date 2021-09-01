@@ -12,6 +12,9 @@
   h3 {
     @apply text-xl font-bold;
   }
+  blockquote {
+    @apply border-l-4 pl-3 ml-2 border-gray-300;
+  }
   ol {
     @apply list-decimal space-y-2;
   }

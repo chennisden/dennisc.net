@@ -17,16 +17,47 @@ to write your own TeX in.
 
 If you are using Overleaf and want my help,
 I will take a page from Evan Chen's book:
+
 > First install LaTeX properly,
 > then if it still doesn’t work write to me again.
 
-- [scrambledenvs.sty](https://github.com/chennisden/scrambledenvs.sty)
+Otherwise, feel free to email me at [dchen@dennisc.net](mailto:dchen@dennisc.net). Discord or Hangouts work too, if you know how to reach me there.
+
+- [scrambledenvs.sty](https://github.com/chennisden/scrambledenvs)
     
     It provides a macro to declare scrambled environments,
     e.g. scrambled hints or solutions.
     It was written to serve as a replacement to Evan Chen's
     [code for his geometry book](https://web.evanchen.cc/faq-latex.html\#L-13).
     Install instructions, for the less LaTeX proficient out there, can be found on [this GitHub Gist](https://gist.github.com/chennisden/84c2224b10f0b177e4726db0bec45381).
+
+- [palette](https://github.com/chennisden/palette)
+
+    Provides tools to create and easily swap out color palettes. This package is meant for designers to use, since the API to switch palettes is user-friendly.
+
+    The package provides `colorpalette.sty` and `symbolpalette.sty`. (If it was up to me, I would have called the latter `symbolsuite`, but then the name would not be at all relevant to "palette.")
+
+I've also designed some document classes which provide semantic environments (such as theorem, proof, and solution environments), as well as changing the overall document output drastically. These classes are not documented at all, so my suggestion is that you email me for an example `.tex` file if interested.
+
+If you are in Math Advance, you will notice that the contest and book classes are not available here. While I am a big proponent of open source, I'd like to have some control over where our professional designs come up. If you want to study the code, please just let me know! I'm willing to send over snippets on an individual basis.
+
+I don't mind at all if you use my personal classes below for any reason.
+
+- [bounce.cls](https://github.com/chennisden/bounce)
+    
+    The document class that I recommend and people seem to like the most. True to its name, the design is based on a theme of bounciness.
+
+    Each of the pieces of the class can be taken apart. For instance, if you want to import and use just the boxes, you can just `\usepackage{bounceboxes}`.
+
+- [denniscv](https://github.com/chennisden/denniscv)
+
+    This is the document class I use to typeset [my CV](cv.pdf). The [TeX source](cv.tex) is also available.
+
+- [chennistex](https://github.com/chennisden/chennistex)
+
+    These are my old personal classes which will recieve limited support. It is strongly recommended that you use `bounce.cls` unless you have a specific reason to use one of these classes.
+
+    Currently, `lucky.cls` is used by MAST, so I will probably support it more to some extent.
 
 ## Web
 
