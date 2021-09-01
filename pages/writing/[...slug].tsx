@@ -6,6 +6,7 @@ import { bundleMDX } from "mdx-bundler";
 import path from "path";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { getPages } from "@/utils/PageUtils";
+import { remarkPlugins, rehypePlugins } from "@/utils/MDXPlugins";
 
 export default function PostPage(props) {
   return <PageRender props={props} />;
@@ -40,8 +41,25 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const POST_PATH = path.join(process.cwd(), "posts");
 
-  const { code } = await bundleMDX(content, {});
-
+  const { code } = await bundleMDX(content, {
+    cwd: POST_PATH,
+    // doesn't actually matter,
+    // since all of my imports
+    // are absolute.
+    xdmOptions(options) {
+      // https://github.com/kentcdodds/mdx-bundler#options
+      // This is why there is the weird syntax at the front.
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
+        ...remarkPlugins,
+      ];
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        ...rehypePlugins,
+      ];
+      return options;
+    }
+  });
   return {
     props: {
       code,

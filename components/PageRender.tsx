@@ -14,6 +14,12 @@ const PageRender: FC<{ props }> = ({ props }) => {
     <>
       <Head>
         <title>{props.data.title}</title>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.css"
+          integrity="sha384-2vkq42dvFAQl88n6UuPWLKSKnFnHyyoSgy788ohlfWZ4xEmF8g0kCMZe1CkaXHDd"
+          crossOrigin="anonymous"
+        />
         <meta
           name="description"
           content={`${props.data.desc || props.data.title}`}
