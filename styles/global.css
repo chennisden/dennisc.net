@@ -12,6 +12,35 @@
   h3 {
     @apply text-xl font-bold;
   }
+  ol {
+    @apply list-decimal space-y-2;
+  }
+  ol li {
+    @apply space-y-2;
+  }
+  [role="doc-noteref"] {
+    @apply pl-0.5;
+  }
+  [role="doc-backlink"] {
+    @apply pl-1.5;
+  }
+}
+
+[role="doc-noteref"] sup::before {
+  content: "[";
+}
+
+[role="doc-noteref"] sup::after {
+  content: "]";
+}
+
+ol {
+  list-style-position: outside;
+  padding-left: 12px;
+}
+
+ol li {
+  padding-left: 6px;
 }
 
 ul li {
