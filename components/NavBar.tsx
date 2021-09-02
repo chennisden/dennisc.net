@@ -3,8 +3,8 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 const NavBarItem: FC<{}> = ({ children }) => {
-  const router = useRouter();
-  const paths = router.pathname.split("/");
+  const { asPath } = useRouter();
+  const paths = asPath.split("/");
   return (
     <div className="px-6 py-6">
       <NextLink href={`/${children}`}>
