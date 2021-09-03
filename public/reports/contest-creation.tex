@@ -12,6 +12,8 @@
 
 \begin{abstract}
     This is a reflection of the contests I've created under Math Advance for the last two years, primarily the Summer 2021 MAT. At the same time, it is meant to serve as a loose guide for anyone looking to create their own contest or refine their craft.
+
+    This report assumes you have some idea of what makes a problem worth doing and what makes a contest worth taking. In short, I assume you have \emph{taste}. It also assumes basic common sense, because my goal is not to make a document for the $95\%$ who can't figure out that they should announce their contest after they write it. It is for the contest organizers with real potential.
 \end{abstract}
 
 \section{How to start}
@@ -78,14 +80,34 @@ It gets further magnified by the official structures of clubs and non-profits, w
 
 It's roles, rather, that should be frequently rotated out as everyone's interests and circumstances change.
 
-So don't try to look for people because you think they'd make a good secretary, or a good treasurer, or whatever. Look for people who seem interesting and are interested in contributing to your group. Even if only half of them do any serious work, it'll far outshine any robotic organization put together by putting people into roles, rather than putting roles on people.
+So don't try to look for people because you think they'd make a good secretary, or a good treasurer, or whatever. Look for people who seem interesting and are interested in contributing to your group. Even if only half of them do any serious work, it'll far outshine any robotic organization put together by placing people in roles, rather than giving roles to people.
 
-\section{Time management}
+\section{Test-setting}
+
+\section{Logistics}
+
+Here is the long and short of it. You need
+\begin{enumerate}
+    \item A website,
+    \item sponsors,
+    \item and outreach,
+\end{enumerate}
+\emph{in this order}. Most sponsors will ask for a website when evaluating your email, so you absolutely have to finish that first, though you can work on email drafts before then. You could start outreach before you get sponsors, but I strongly advise against this, particularly because a signup period of two or three weeks is ideal for online contests, and that is not enough time for sponsorship queries to be finalized.\footnote{I would imagine that the ideal signup period for in-person contests is about a month more, i.e. three or four weeks.}
+
+What follows are specifics on sponsors and outreach, as well as some general tips on time management. If you want to learn how to make a website, read the docs, they'll teach you much better than I can.\footnote{Feel free to send me questions though, if you've done your own work.}
+
+\subsection{Sponsors}
+
+\subsection{Outreach}
+
+
+
+\subsection{Time management}
 
 By the time you publicly announce your contest, you should have everything finalized. Now, this is not always possible and sometimes you want to strategically push out a public announcement just to force some final checks to happen. But be aware this is a dangerous thing to do.
 
 At no point should you announce a contest if there is no way you can finish on time.
-Nor should you make that judgment too early.
+Nor should decide early on that you can finish on time, especially not in the face of contradictory evidence. early.
 Your reputation as a contest host is important,
 and you should not throw it away by haphazardly announcing contests that you know you cannot hold.
 
@@ -99,7 +121,25 @@ Something really common I've seen with respect to timing is \emph{announcing the
 
 Generally you'll want three to six months to assemble the problems, depending on how much attention to detail you want to put inside your test. It may take longer if you're working out the kinks of your contest format. It took us about eight months to finalize the MAT, though a large reason for that is because we had a pretty far release date and kept revisiting the problems before then.
 
-The format took about two weeks to finalize after I came up with it, though we had a more liberal idea for tiebreakers for a while. Because our contest format was so conservative, it was finalized relatively quickly, but I recommend that organizers intending to write contests with more rounds (such as team rounds) give serious thought to time restrictions, format, and the difficulty spread. 
+The format for the MAT took about two weeks to finalize after I came up with it, though we had a more liberal idea for tiebreakers for a while. Because our contest format was so conservative, it was finalized relatively quickly, but I recommend that organizers intending to write contests with more rounds (such as team rounds) give serious thought to time restrictions, format, and the difficulty spread. 
+
+When it comes to logistics, the primary concern is not how long it will take you to get things done. It's getting them done to begin with.
+
+If you plan on making a website, make sure that at least one of your \emph{core members} actually have experience working with a Javascript framework.
+If this is not the case, React is by far the most popular framework in the math contest community.
+\footnote{The stack I personally use is Node JS + React JS + Next JS + Tailwind CSS, and it's also what we used for MAT. We used Firebase for MAT, but I cannot personally recommend it one way or another because I haven't used it myself.
+
+If you don't plan on making a website, do not plan on getting sponsors. Google Sites and the like are incredibly unprofessional, and I'd imagine it'd tank your chances at most significant sponsorships.
+
+You should bake in at least two months when it comes to sponsor emails; the turnaround can vary drastically, and that's about how long you'll need to finalize your sponsor list.
+Every student-run contest so far, including ours, has gotten more sponsors during the advertisement period.
+I think this is not ideal for the organizers, though it is workable. It creates a logistics time crunch, which is really no fun.
+
+Empirically, people have given themselves less time than they actually needed for sponsors.
+So start about a month earlier than you think you'd need to at the latest.
+
+(Please don't ask me about backend, I don't know backend.)}
+Learn it while you still have the time to.
 
 \section{Testsolving and final checks}
 
@@ -116,7 +156,9 @@ I recommend you read \href{https://www.dennisc.net/resources/careful.pdf}{Carefu
 
 These mistakes are why you get people from outside to perform thorough \emph{validity checks}. Some of these are so obvious that it almost seems impossible that an entire group of people missed it.
 
-Here are some mistakes that MAC has made. The bolded parts are the added fixes. All problems mentioned will be spoiled, so if you want to try them first, do not read the rest of this subsection.
+Here are some mistakes that MAC has made. The bolded parts are added fixes. All problems mentioned will be spoiled, so if you want to try them first, do not read the rest of this subsection.
+
+Problems are from the 2020 JMC 10 and the Summer 2021 MAT.
 
 \begin{exam}[JMC 2020/11]
     Jack has eight sticks of different lengths in the set $\{1,2,3,\dots,7,8\}$. How many nonempty subsets of these eight sticks can Jack choose so the range of the lengths is at most $4$ meters?
@@ -138,5 +180,7 @@ As a problem-writer, even if you are \emph{confident} in your answer, you should
 
 But consider the common mistake made in AIME I 2020/11. If $a=b$, then there is a level of redundancy as the conditions reduce to $p(a)=ac,$ $p(a)=ac,$ and $p(c)=a^2$. Since two points do not uniquely determine a quadratic, $p(10)$ could have been anything. Some contestants did not notice our mistake and put $33$, which they were awarded points for. This is why the ``distinct'' condition was necessary, and the only reason we didn't catch this mistake is because we never checked our construction \emph{from the beginning}.
 
-In both of these problems, our issues were not related to the main idea of the problem --- rather, it was because we did not check details closely enough. This is likely because many of us got conditioned into evaluating the merit of a problem when thinking about it as we grow more familiar with our problem base. Outside perspectives are not painted with such bias, which is why it is important to include them. 
+In both of these problems, our issues were not related to the main idea of the problem. Rather, it was because we did not check details closely enough. This is likely because many of us got conditioned into evaluating the merit of a problem, rather than the contents, when thinking about it as we grow more familiar with our problem base. Outside perspectives are not painted with such bias, which is why it is important to seek and consider them.
+
+
 \end{document}
