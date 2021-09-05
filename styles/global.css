@@ -47,7 +47,7 @@ ol li {
 }
 
 ul li {
-  list-style-type: "\2192";
+  list-style-type: "➤";
   padding-left: 8px;
 }
 
