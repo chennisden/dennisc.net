@@ -7,7 +7,8 @@ import Footer from "@/components/Footer";
 import Back from "@/components/Back";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
+  const { asPath } = useRouter();
+  const paths = asPath.split("/");
   return (
     <div>
       <Head>
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="my-6" />
         <div className="flex justify-center">
           <div className="mx-12 w-full max-w-screen-sm space-y-2">
-            {router.pathname != "/" && <Back href="." />}
+            {paths[1] != "" && <Back href="." />}
             <Component {...pageProps} />
           </div>
         </div>
