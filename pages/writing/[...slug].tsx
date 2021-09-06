@@ -8,8 +8,16 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { getPages } from "@/utils/PageUtils";
 import { remarkPlugins, rehypePlugins } from "@/utils/MDXPlugins";
 
+import dynamic from "next/dynamic";
+const Reactive = dynamic(() => import("@/components/Reactive"));
+
 export default function PostPage(props) {
-  return <PageRender props={props} />;
+  return (
+    <>
+      <PageRender props={props} />
+      <Reactive />
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -58,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         ...rehypePlugins,
       ];
       return options;
-    }
+    },
   });
   return {
     props: {

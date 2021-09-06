@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Page } from "@/utils/types";
-import { getPages } from "@/utils/PageUtils";
 import LinkBox from "@/components/LinkBox";
 
 const PageList: FC<{ parentDir: string; pageList: Page[] }> = ({
