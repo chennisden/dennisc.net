@@ -15,7 +15,7 @@ const Reactive = () => {
         measurementId: "G-4441L3S6BS",
       },
       reactions: [],
-      reactionText: "Leave your thoughts below.",
+      reactionText: "",
     });
   });
 

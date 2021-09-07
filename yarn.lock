@@ -517,10 +517,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@maggieliu/reactive@^1.2.8":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@maggieliu/reactive/-/reactive-1.2.8.tgz#bf05683adf615ea79977f363ab6fd82d0853826e"
-  integrity sha512-srtRKpW0lfD+R0HqPwcwh9cUcYLHxZ1M76tIGChSS9bVB2zAQ73kHLAnxftvYTT8fdZBPBoLj+oVets7miDV0g==
+"@maggieliu/reactive@^1.2.9":
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@maggieliu/reactive/-/reactive-1.2.9.tgz#e9cec15542bf8c35db092742c44a35cce8681e83"
+  integrity sha512-Fg91mgGXvm8whMe8GfXmo0OpJgLLqF6X4l5Hmuv9wYGtB0LSZ6kNZQlpXJQcUeQnDqfP0thgNb/dC4R6wpg3hw==
   dependencies:
     sirv-cli "^1.0.0"
 
