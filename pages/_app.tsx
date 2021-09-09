@@ -9,7 +9,7 @@ import Back from "@/components/Back";
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   const paths = asPath.split("/");
-  var backPaths = paths;
+  var backPaths = asPath.split("/");
   backPaths.pop();
   return (
     <div>
