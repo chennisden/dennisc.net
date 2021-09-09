@@ -9,6 +9,8 @@ import Back from "@/components/Back";
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   const paths = asPath.split("/");
+  var backPaths = paths;
+  backPaths.pop();
   return (
     <div>
       <Head>
@@ -20,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="my-6" />
         <div className="flex justify-center">
           <div className="mx-12 w-full max-w-screen-sm space-y-2">
-            {paths[1] != "" && <Back href="." />}
+            {paths[1] != "" && <Back href={backPaths.join("/")} />}
             <Component {...pageProps} />
           </div>
         </div>
