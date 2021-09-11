@@ -22,16 +22,19 @@
     @apply pl-2;
   }
   ol {
-    @apply list-inside list-decimal space-y-2;
+    @apply list-outside list-decimal pl-4 space-y-1;
   }
   ol li {
-    @apply py-2;
+    @apply pl-1 space-y-2;
   }
   [role="doc-noteref"] {
     @apply pl-0.5;
   }
   [role="doc-backlink"] {
     @apply pl-1.5;
+  }
+  [role="doc-endnotes"] {
+    @apply space-y-2;
   }
 }
 
