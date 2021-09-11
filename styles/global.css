@@ -15,8 +15,14 @@
   blockquote {
     @apply border-l-4 pl-3 ml-2 border-gray-300;
   }
+  ul {
+    @apply list-outside pl-2.5;
+  }
+  ul li {
+    @apply pl-2;
+  }
   ol {
-    @apply list-decimal space-y-2;
+    @apply list-inside list-decimal space-y-2;
   }
   ol li {
     @apply py-2;
@@ -37,16 +43,6 @@
   content: "]";
 }
 
-ol {
-  list-style-position: inside;
-}
-
 ul li {
   list-style-type: "➤";
-  padding-left: 8px;
-}
-
-ul {
-  list-style-position: outside;
-  padding-left: 10px;
 }
