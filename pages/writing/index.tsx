@@ -34,7 +34,7 @@ const Writing: FC<{}> = () => {
             slug: "blog",
             data: {
               title: "Blog Posts",
-              desc: "Musings, off-the-cuff observations, and interesting stories.",
+              desc: "Musings, stories, and fiction.",
             },
             content: "",
           },
