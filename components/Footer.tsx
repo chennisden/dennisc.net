@@ -4,6 +4,12 @@ import NextLink from "next/link";
 import { AiFillGithub, AiOutlineMail, AiFillYoutube } from "react-icons/ai";
 import { FaTwitch } from "react-icons/fa";
 
+interface footerLink {
+  display: string;
+  shortDisplay?: string;
+  href: string;
+}
+
 const Link: FC<{ href: string; className?: string }> = ({
   href,
   className,
@@ -11,38 +17,132 @@ const Link: FC<{ href: string; className?: string }> = ({
 }) => {
   return (
     <NextLink href={`${href}`}>
-      <a className={`${className} hover:underline focus-visible:outline-white`}>{children}</a>
+      <a className={`${className} hover:underline focus-visible:outline-white`}>
+        {children}
+      </a>
     </NextLink>
   );
 };
 
+const FooterItem: FC<{
+  mainFooterLink: footerLink;
+  subFooterLinks?: footerLink[];
+}> = ({ mainFooterLink, subFooterLinks }) => {
+  return (
+    <div className="grid gap-y-2">
+      <Link href={mainFooterLink.href} className="font-bold">
+        {mainFooterLink.shortDisplay ? (
+          <>
+            <div className="hidden sm:contents">{mainFooterLink.display}</div>
+            <div className="contents sm:hidden">
+              {mainFooterLink.shortDisplay}
+            </div>
+          </>
+        ) : (
+          mainFooterLink.display
+        )}
+      </Link>
+      {subFooterLinks && (
+        <div className="hidden widephone:contents">
+          {subFooterLinks.map((subFooterLink) => (
+            <Link href={subFooterLink.href}>
+              {subFooterLink.shortDisplay ? (
+                <>
+                  <div className="hidden sm:contents">
+                    {subFooterLink.display}
+                  </div>
+                  <div className="contents sm:hidden">
+                    {subFooterLink.shortDisplay}
+                  </div>
+                </>
+              ) : (
+                subFooterLink.display
+              )}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Footer: FC<{}> = () => {
+  const footerItems = [
+    {
+      mainFooterLink: {
+        href: "/",
+        display: "Dennis Chen",
+        shortDisplay: "Dennis",
+      },
+      subFooterLinks: [
+        {
+          href: "cv.pdf",
+          display: "CV",
+        },
+        {
+          href: "about",
+          display: "About",
+        },
+        {
+          href: "faq",
+          display: "FAQ",
+        },
+      ],
+    },
+    {
+      mainFooterLink: {
+        href: "math",
+        display: "Math",
+      },
+      subFooterLinks: [
+        {
+          href: "https://www.mathadvance.org",
+          display: "Math Advance",
+        },
+      ],
+    },
+    {
+      mainFooterLink: {
+        href: "writing",
+        display: "Writing",
+      },
+      subFooterLinks: [
+        {
+          href: "essays",
+          display: "Essays",
+        },
+        {
+          href: "blog",
+          display: "Blog",
+        },
+        {
+          href: "tech",
+          display: "Tech",
+        },
+      ],
+    },
+    {
+      mainFooterLink: {
+        href: "code",
+        display: "Code",
+      },
+    },
+  ];
+
   return (
     <div className="flex bg-black py-10 px-12 sm:px-28 justify-center">
       <div>
-        <div className="grid grid-cols-4 flex items-start text-white text-lg gap-x-20">
-          <div className="grid gap-y-2">
-            <Link href="/" className="font-bold">
-              Dennis Chen
-            </Link>
-            <Link href="cv.pdf">CV</Link>
-            <Link href="about">About</Link>
-            <Link href="faq">FAQ</Link>
-          </div>
-          <div className="grid gap-y-2">
-            <Link href="math" className="font-bold">
-              Math
-            </Link>
-            <Link href="https://www.mathadvance.org">Math Advance!</Link>
-          </div>
-          <div className="grid gap-y-2">
-            <Link href="writing" className="font-bold">
-              Writing
-            </Link>
-            <Link href="writing/essay">Essays</Link>
-            <Link href="writing/blog">Blog</Link>
-            <Link href="writing/tech">Tech</Link>
-          </div>
+        <div className="grid widephone:grid-cols-4 items-start text-white text-lg gap-x-20 gap-y-2">
+          {footerItems.map((footerItem) =>
+            footerItem.subFooterLinks ? (
+              <FooterItem
+                mainFooterLink={footerItem.mainFooterLink}
+                subFooterLinks={footerItem.subFooterLinks}
+              />
+            ) : (
+              <FooterItem mainFooterLink={footerItem.mainFooterLink} />
+            )
+          )}
           <div className="grid gap-y-2">
             <Link href="code" className="font-bold">
               Code
