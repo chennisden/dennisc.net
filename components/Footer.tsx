@@ -133,9 +133,10 @@ const Footer: FC<{}> = () => {
     <div className="flex bg-black py-10 px-12 sm:px-28 justify-center">
       <div>
         <div className="grid widephone:grid-cols-4 items-start text-white text-lg gap-x-20 gap-y-2">
-          {footerItems.map((footerItem) =>
+          {footerItems.map((footerItem, index) =>
             footerItem.subFooterLinks ? (
               <FooterItem
+                key={index}
                 mainFooterLink={footerItem.mainFooterLink}
                 subFooterLinks={footerItem.subFooterLinks}
               />
@@ -143,11 +144,6 @@ const Footer: FC<{}> = () => {
               <FooterItem mainFooterLink={footerItem.mainFooterLink} />
             )
           )}
-          <div className="grid gap-y-2">
-            <Link href="code" className="font-bold">
-              Code
-            </Link>
-          </div>
         </div>
         <hr className="my-6" />
         <div className="flex justify-evenly align-center text-4xl text-white">
