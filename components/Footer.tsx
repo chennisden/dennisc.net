@@ -130,8 +130,8 @@ const Footer: FC<{}> = () => {
   ];
 
   return (
-    <div className="flex bg-black py-10 px-12 sm:px-28 justify-center">
-      <div>
+    <div className="flex bg-black py-10 px-12 justify-center">
+      <div className="w-full">
         <div className="grid widephone:grid-cols-4 items-start text-white text-lg gap-x-20 gap-y-2">
           {footerItems.map((footerItem, index) =>
             footerItem.subFooterLinks ? (
@@ -146,7 +146,7 @@ const Footer: FC<{}> = () => {
           )}
         </div>
         <hr className="my-6" />
-        <div className="flex justify-evenly align-center text-4xl text-white">
+        <div className="flex justify-between widephone:justify-evenly align-center text-4xl text-white">
           <Link
             href="https://github.com/chennisden"
             className="hover:text-blue-400"
