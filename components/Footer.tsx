@@ -44,8 +44,8 @@ const FooterItem: FC<{
       </Link>
       {subFooterLinks && (
         <div className="hidden widephone:contents">
-          {subFooterLinks.map((subFooterLink) => (
-            <Link href={subFooterLink.href}>
+          {subFooterLinks.map((subFooterLink, index) => (
+            <Link href={subFooterLink.href} key={index}>
               {subFooterLink.shortDisplay ? (
                 <>
                   <div className="hidden sm:contents">
