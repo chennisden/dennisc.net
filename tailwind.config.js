@@ -9,6 +9,9 @@ module.exports = {
       screens: {
         widephone: "480px",
       },
+      listStyleType: {
+        arrow: "➤"
+      }
     },
   },
 };

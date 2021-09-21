@@ -16,7 +16,7 @@
     @apply border-l-4 pl-3 ml-2 border-gray-300;
   }
   ul {
-    @apply list-outside pl-2.5;
+    @apply list-outside list-arrow pl-2.5;
   }
   ul li {
     @apply pl-2;
@@ -44,8 +44,4 @@
 
 [role="doc-noteref"] sup::after {
   content: "]";
-}
-
-ul li {
-  list-style-type: "➤";
 }
