@@ -1,0 +1,41 @@
+Hello Mr. Kelly,
+I hope your week is going well.
+
+In class on Friday you were discussing the formula for the r-coefficient, and mentioned that you didn't have a good explanation for why the formula had to yield an r-coefficient whose absolute value was less than 1. I thought about this in the hallway after class for a bit and I've figured out why it's true. I thought you might be interested in the proof. The crux of the proof revolves around a result known as the Cauchy-Schwarz inequality.
+
+The key is to translate the data-set into its z-scores, both in the x and y axes. Then, you have
+ $r=\frac{1}{n-1}\sum z_{x_i}z_{y_i}.$
+
+Now, by the definition of a standardized data set, the standard deviation is 1, meaning that
+
+$\sqrt{\frac{1}{n-1}\sum z_{x_i}^2}=1$
+
+$\frac{1}{n-1}\sum z_{x_i}^2=1$
+
+$\sum z_{x_i}^2=n-1.$
+
+Similarly,
+
+$\sum z_{y_i}^2=n-1.$
+
+(We also know that the mean is 0, but it will turn out that this doesn't matter for the proof.)
+
+What we want to prove, essentially, is that $|\sum z_{x_i}z_{y_i}|\leq n-1.$ Here's where Cauchy comes in.
+
+The Cauchy-Schwarz inequality states that given vectors x and y, $|x\cdot y| \leq |x||y|$ (where $\cdot$ denotes the dot product). This is because $x\cdot y = |x||y|\cos\theta$ by definition, where $\theta$ is the angle between the two vectors.
+
+If you rewrite Cauchy-Schwarz in the coordinate interpretation of the dot product and the magnitude of a vector, you get
+
+$|\sum x_iy_i| \leq \sqrt{\sum x_i^2}\sqrt{\sum y_i^2}.$
+
+And that's it. Substitute in $z_x$ and $z_y$ as your vectors and you get
+
+$|\sum z_{x_i}z_{y_i}|\leq \sqrt{\sum z_{x_i}^2}\sqrt{\sum z_{y_i}^2}=\sqrt{n-1}\sqrt{n-1}=n-1,$
+
+as desired. Divide the inequality by $n-1$ and you get that the $r$-value has an absolute value less than or equal to $1$.
+
+Hopefully you found the proof interesting.
+
+All the best,
+
+Dennis
