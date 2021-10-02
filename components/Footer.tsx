@@ -76,22 +76,22 @@ const Footer: FC<{}> = () => {
       },
       subFooterLinks: [
         {
-          href: "cv.pdf",
+          href: "/cv.pdf",
           display: "CV",
         },
         {
-          href: "about",
+          href: "/about",
           display: "About",
         },
         {
-          href: "faq",
+          href: "/faq",
           display: "FAQ",
         },
       ],
     },
     {
       mainFooterLink: {
-        href: "math",
+        href: "/math",
         display: "Math",
       },
       subFooterLinks: [
@@ -103,27 +103,27 @@ const Footer: FC<{}> = () => {
     },
     {
       mainFooterLink: {
-        href: "writing",
+        href: "/writing",
         display: "Writing",
       },
       subFooterLinks: [
         {
-          href: "essays",
+          href: "/writing/essays",
           display: "Essays",
         },
         {
-          href: "blog",
+          href: "/writing/blog",
           display: "Blog",
         },
         {
-          href: "tech",
+          href: "/writing/tech",
           display: "Tech",
         },
       ],
     },
     {
       mainFooterLink: {
-        href: "code",
+        href: "/code",
         display: "Code",
       },
     },
