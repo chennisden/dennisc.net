@@ -1,3 +1,7 @@
+# THIS IS A DEAD MIRROR
+
+Please visit https://gitlab.com/chennisden/dennisc.net instead
+
 # Dennis Chen's Website
 
 Thie is the GitHub repository for my website.
